@@ -1,0 +1,265 @@
+{
+  "store.home": { 
+    "blocks": [
+      "tab-layout#home",
+      "list-context.image-list#demo",
+      "search-result-layout.customQuery#home"
+    ]
+  },
+  "tab-layout#home": {
+  "children": [
+    "tab-list#home"
+   // "tab-content#home"
+  ],
+  "props": {
+    "blockClass": "home",
+    "defaultActiveTabId": "home1"
+  }
+},
+"tab-list#home": {
+  "children": [
+    "tab-list.item#home1",
+    "tab-list.item#home2",
+    "tab-list.item#home3",
+    "tab-list.item#home4",
+    "tab-list.item#home5"
+  ]
+},
+"tab-list.item#home1": {
+  "props": {
+    "tabId": "home1",
+    "label": "Home 1",
+    "defaultActiveTab": true
+  }
+},
+"tab-list.item#home2": {
+  "props": {
+    "tabId": "home2",
+    "label": "Home 2"
+  }
+},
+"tab-list.item#home3": {
+  "props": {
+    "tabId": "home3",
+    "label": "Home 3"
+  }
+},
+"tab-list.item#home4": {
+  "props": {
+    "tabId": "home4",
+    "label": "Home 4"
+  }
+},
+"tab-list.item#home5": {
+  "props": {
+    "tabId": "home5",
+    "label": "Home 5"
+  }
+},
+
+ /*"tab-content#home": {
+   "children": [
+     "tab-content.item#home1"
+     //"tab-content.item#home2"
+   ]
+ },
+ "tab-content.item#home1": {
+   "children": [
+     "carousel#home"
+   ],
+   "props": {
+     "tabId": "home1"
+   }
+ },
+// "tab-content.item#home2": {
+//   "children": [
+//     "shelf#home",
+//     "info-card#home",
+//     "rich-text#question",
+//     "rich-text#link",
+//     "newsletter"
+//   ],
+//   "props": {
+//     "tabId": "home2"
+//   }
+// },
+ "carousel#home": {
+  "props": {
+    "autoplay": true,
+    "autoplaySpeed": 4,
+    "banners": [],
+    "height": 440,
+    "showArrows": true,
+    "showDots": true
+  }
+}*/
+
+
+
+"list-context.image-list#demo": {
+  "children": ["slider-layout#demo-images"],
+  "props": {
+    "images": [
+      {
+   
+  
+        "image": "https://hiringcoders2021.vtexassets.com/assets/vtex/assets-builder/hiringcoders2021.monsalex23/0.0.1/b2___93d10914626e857729707d16501a7d85.png",
+        "mobileImage": "https://hiringcoders2021.vtexassets.com/assets/vtex/assets-builder/hiringcoders2021.monsalex23/0.0.1/b2___93d10914626e857729707d16501a7d85.png"
+      },
+      {
+        "width":"80%",
+        "image": "https://hiringcoders2021.vtexassets.com/assets/vtex/assets-builder/hiringcoders2021.monsalex23/0.0.1/b1___16132ec7845551c9152db1b9843a74a4.png",
+        "mobileImage": "https://hiringcoders2021.vtexassets.com/assets/vtex/assets-builder/hiringcoders2021.monsalex23/0.0.1/b1___16132ec7845551c9152db1b9843a74a4.png"
+      }
+    ]
+  }
+},
+"slider-layout#demo-images": {
+  "props": {
+
+    "itemsPerPage": {
+      "desktop": 1,
+      "tablet": 1,
+      "phone": 1
+    },
+    "infinite": true,
+    "showNavigationArrows": "desktopOnly",
+    "blockClass": "carousel"
+  }
+},
+
+"search-result-layout.customQuery#home": {
+  "props": {
+    "querySchema": {
+      "skusFilter": "FIRST_AVAILABLE",
+      "simulationBehavior": "skip",
+      "maxItemsPerPage": 8,
+      "blockClass": "sr"
+    }
+  },
+  "blocks":[     
+    "search-result-layout.desktop",
+    "search-result-layout.mobile"
+  ]
+},
+"search-result-layout.desktop": {
+  "children": [
+    "search-content"
+  ],
+  "props": {
+    "preventRouteChange": true
+  }
+},
+
+"search-content": {
+  "blocks":[
+    "gallery", 
+    "not-found"
+  ]
+},
+
+
+"gallery": {
+  "props": {
+    "layouts": [
+      {
+        "name": "grid",
+        "component": "GridSummary",
+        "itemsPerRow": {
+          "desktop": 2,
+          "tablet": 2,
+          "phone": 1
+        }
+      },
+      {
+        "name": "list",
+        "component": "ListSummary",
+        "itemsPerRow": 1
+      }
+    ],
+    "ListSummary": "product-summary.shelf#lp",
+    "GridSummary": "product-summary.shelf#lp"
+  }
+},
+"product-summary.shelf#lp": {
+  "children": [
+    "modal-trigger",
+    "product-summary-name",
+    "product-images#lp",
+    "vtex.product-highlights@2.x:product-highlights",
+    "vtex.product-highlights@2.x:product-highlights#2",
+    "product-summary-price",
+    "add-to-cart-button"
+
+  ],
+ "props": {
+   "blockClass": [
+    "aoba",
+    "teste"
+   ]
+ }
+},
+"product-images#lp": {
+  "props": {
+    "showNavigationArrows": true,
+    "showPaginationDots": true
+  }
+},
+"vtex.product-highlights@2.x:product-highlights": {
+  "children": ["product-highlight-text"]
+},
+"product-highlight-text": {
+  "props": {
+    "message": "Pré Lançamento\n"
+ 
+  }
+},
+"vtex.product-highlights@2.x:product-highlights#2": {
+  "children": ["product-highlight-text#2"]
+},
+"product-highlight-text#2": {
+  "props": {
+    "message": "\nValidação em Breve"
+ 
+  }
+},
+"add-to-cart-button": {
+  "props": {
+    "onClickBehavior": "go-to-product-page",
+    "text": "Ver Detalhes"
+  }
+},
+"modal-trigger": {
+  "children": [
+    "rich-text#lp",
+    "modal-layout#lp"
+  ]
+},
+"rich-text#lp": {
+  "props": {
+    "text": "Vídeo",
+    "textAlignment": "CENTER",
+    "textPosition": "CENTER",
+    "textColor": "--rebel-pink: #F71963"
+  }
+},
+"modal-layout#lp": {
+  "children": [
+    "video#lp"
+  ]
+},
+"video#lp": {
+  "props": {
+    "width": "100%",
+    "height": "600px",
+    "loop": false,
+    "autoPlay": true,
+    "muted": false,
+    "src": "https://www.youtube.com/watch?v=j5e-56_Xo00",
+    "blockClass": "videoEl"
+  }
+}
+
+
+
+}
