@@ -3,6 +3,10 @@
   background: black;
 }
 .flexRow{
-    background: black;
+ background: black;
+   color: white;
 }
 
+.container{
+  color: black;
+}

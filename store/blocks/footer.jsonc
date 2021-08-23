@@ -1,25 +1,50 @@
 {
   "footer": {
-    "blocks": ["footer-layout.desktop", "footer-layout.mobile"]
+    "blocks": [ "footer-layout.desktop", "footer-layout.mobile"]
   },
-  "footer-layout.desktop": { 
+  
+  "footer-layout.desktop": {
     "children": [
-      "flex-layout.row#footer"
+      "flex-layout.row#footer-desktop"
     ]
   },
-  "footer-layout.mobile": { 
+  "footer-layout.mobile": {
     "children": [
-      "flex-layout.row#footer"
+      "flex-layout.row#footer-mobile"
     ]
   },
-  "flex-layout.row#footer": { 
+
+  "flex-layout.row#footer-desktop": {
     "children": [
-      "rich-text#footer"
+    
+      "social-networks",
+      "accepted-payment-methods"
     ]
   },
-  "rich-text#footer": {
+  "flex-layout.row#footer-mobile": {
+    "children": [
+      "social-networks",
+      "accepted-payment-methods"
+ 
+    ]
+  },
+
+
+  "social-networks": {
     "props": {
-      "text": "Footer"
+      "title": "Contatos",
+      "showInColor": "true",
+      "socialNetworks": [
+        { "url": "https://www.facebook.com/delanoaugusto/", "name": "Facebook" },
+        { "url": "https://www.linkedin.com/in/delano-augusto-costa/", "name": "Linkedin" },
+        { "url": "https://www.youtube.com/channel/UChr-yOZujMEzMYoYHQJoosQ", "name": "Youtube" }
+      ]
+    }
+  },
+  "accepted-payment-methods": {
+    "props": {
+      "showInColor": "true",
+      "paymentMethods": ["mastercard", "visa", "diners club"]
     }
   }
 }

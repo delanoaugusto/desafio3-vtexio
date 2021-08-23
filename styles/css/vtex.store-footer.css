@@ -1,0 +1,12 @@
+.socialNetworkWrapper{
+    color: white;
+    margin-left: 100%;
+    margin-top: 10px;
+    font-size: 30px;
+    ;
+}
+
+.acceptedPaymentMethodContainer{
+    align-items: flex-end;
+    margin-left: 80%;
+}

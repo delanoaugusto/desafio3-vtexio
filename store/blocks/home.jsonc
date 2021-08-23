@@ -57,44 +57,6 @@
   }
 },
 
- /*"tab-content#home": {
-   "children": [
-     "tab-content.item#home1"
-     //"tab-content.item#home2"
-   ]
- },
- "tab-content.item#home1": {
-   "children": [
-     "carousel#home"
-   ],
-   "props": {
-     "tabId": "home1"
-   }
- },
-// "tab-content.item#home2": {
-//   "children": [
-//     "shelf#home",
-//     "info-card#home",
-//     "rich-text#question",
-//     "rich-text#link",
-//     "newsletter"
-//   ],
-//   "props": {
-//     "tabId": "home2"
-//   }
-// },
- "carousel#home": {
-  "props": {
-    "autoplay": true,
-    "autoplaySpeed": 4,
-    "banners": [],
-    "height": 440,
-    "showArrows": true,
-    "showDots": true
-  }
-}*/
-
-
 
 "list-context.image-list#demo": {
   "children": ["slider-layout#demo-images"],
@@ -107,7 +69,7 @@
         "mobileImage": "https://hiringcoders2021.vtexassets.com/assets/vtex/assets-builder/hiringcoders2021.monsalex23/0.0.1/b2___93d10914626e857729707d16501a7d85.png"
       },
       {
-        "width":"80%",
+    
         "image": "https://hiringcoders2021.vtexassets.com/assets/vtex/assets-builder/hiringcoders2021.monsalex23/0.0.1/b1___16132ec7845551c9152db1b9843a74a4.png",
         "mobileImage": "https://hiringcoders2021.vtexassets.com/assets/vtex/assets-builder/hiringcoders2021.monsalex23/0.0.1/b1___16132ec7845551c9152db1b9843a74a4.png"
       }
